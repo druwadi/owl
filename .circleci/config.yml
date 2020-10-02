@@ -4,7 +4,7 @@ orbs:
   python: circleci/python@0.2.1
 
 jobs:
-  build-and-test:
+  lint:
     executor: python/default
     steps:
       - checkout
@@ -12,10 +12,12 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./manage.py test
-          name: Test
+          command: sudo pip install pylint
+      - run:
+          command: pylint --disable=W,C,R ./metrics.py
+          name: Lint Fatal Errors
 
 workflows:
   main:
     jobs:
-      - build-and-test
+      - lint
