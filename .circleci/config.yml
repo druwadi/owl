@@ -2,7 +2,6 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.2.1
-  flake8-orb: wearefair/flake8-orb@0.0.2
 
 jobs:
   build-and-test:
@@ -12,9 +11,9 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      # - run:
-      #     command: ./manage.py test
-      #     name: Test
+      - run:
+          command: pylint ./metrics.py
+          name: Lint
 
 workflows:
   main:
