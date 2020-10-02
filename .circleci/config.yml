@@ -12,7 +12,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pip install pylint
+          command: sudo pip install pylint
       - run:
           command: pylint --disable=W,C,R ./metrics.py
           name: Lint Syntax
