@@ -12,8 +12,8 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pylint ./metrics.py
-          name: Lint
+          command: pylint --disable=W,C,R  metrics.py
+          name: Lint Syntax
 
 workflows:
   main:
