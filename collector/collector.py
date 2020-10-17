@@ -4,7 +4,9 @@ import psutil
 import socket
 import json
 
-client = InfluxDBClient(host='localhost', port=8086)
+# Setup database client
+client = InfluxDBClient(host='influxdb', port=8086)
+
 client.switch_database('collector_metrics')
 
 # defines the hostname where the metrics are running
@@ -46,10 +48,6 @@ while True:
         }
     }
     ]
-
-    # Serializing values to JSON (possibly not necessary with dicts)
-    #cpu_payload_json = json.dumps(cpu_payload)
-    #mem_payload_json = json.dumps(mem_payload)
     
     # Debug statements
     #print(cpu_payload)

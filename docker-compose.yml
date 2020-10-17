@@ -1,0 +1,26 @@
+version: "3.8"
+networks:
+  docknetwork:
+services:
+  db:
+    container_name: influxdb
+    image: influxdb:1.8.2
+    restart: always
+    ports:
+      - 8086:8086
+    expose:
+      - 8086
+    environment: 
+      - INFLUXDB_DB=collector_metrics
+    networks:
+      - docknetwork
+  host:
+    hostname: collector_host
+    container_name: collectorhost
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: host.Dockerfile
+    networks:
+      - docknetwork

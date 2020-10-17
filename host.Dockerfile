@@ -6,7 +6,9 @@ COPY collector/collector.py linux_build/metrics-monitoring.zip /usr/build/
 RUN apt-get update -y \
     && apt-get install python3 -y \
     && apt-get install python3-pip -y \
-    && apt-get install unzip
+    && apt-get install unzip \
+    && apt-get install curl -y \
+    && apt-get install vim -y 
 
 # Build collector for Linux
 RUN cd /usr/build/ \
@@ -17,4 +19,4 @@ RUN cd /usr/build/ \
     && pyinstaller /usr/build/collector.py --onefile \
     && cp /usr/build/metrics-monitoring/dist/collector /bin/collector
 
-CMD ["bash"]
+CMD ["/bin/collector"]
