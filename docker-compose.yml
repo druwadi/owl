@@ -22,7 +22,5 @@ services:
     build:
       context: .
       dockerfile: host.Dockerfile
-    environment: 
-      - client=InfluxDBClient(host='influxdb', port=8086)
     networks:
       - docknetwork
