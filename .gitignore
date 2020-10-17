@@ -1,0 +1,5 @@
+# Untracked files:
+/build
+/dist
+*.spec
+__pycache__
