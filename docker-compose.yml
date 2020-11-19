@@ -24,3 +24,17 @@ services:
       dockerfile: host.Dockerfile
     networks:
       - docknetwork
+  web:
+    hostname: webservice
+    container_name: webservice
+    depends_on:
+      - db
+      - host
+    build:
+      context: .
+      dockerfile: web.Dockerfile
+    ports:
+      - "8000:8000"
+    networks:
+      - docknetwork
+    
