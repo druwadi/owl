@@ -43,32 +43,20 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">
-								<span data-feather="file"></span>
-								Placeholder-1
+								<span data-feather="settings"></span>
+								Settings
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">
-								<span data-feather="shopping-cart"></span>
-								Placeholder-2
+								<span data-feather="file-text"></span>
+								Documentation
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">
-								<span data-feather="users"></span>
-								Placeholder-3
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<span data-feather="bar-chart-2"></span>
-								Placeholder-4
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<span data-feather="layers"></span>
-								Placeholder-5
+								<span data-feather="github"></span>
+								Github
 							</a>
 						</li>
 					</ul>
@@ -90,27 +78,30 @@
 						</button>
 					</div>
 				</div>
-
-				<div class="plotly">
-					<form method="POST">
-						<div class="form-check">
-							<input type="radio" class="form-check-input" id="cpu" name="call" value="cpu" required>
-							<label class="form-check-label" for="cpu">CPU Per Second</label>
-						</div>
-						<div class="form-check">
-							<input type="radio" class="form-check-input" id="mem" name="call" value="mem" required>
-							<label class="form-check-label" for="mem">Memory Per Second</label>
-							</br>
-							<button type="submit" class="btn btn-primary">Submit</button>
-							{% csrf_token %}
-							{% autoescape off %}
-							{{ plot_div }}
-							{% endautoescape %}
-						</div>
-					</form>
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						{% csrf_token %}
+						{% autoescape off %}
+						{{ plot_div }}
+					</div>
+					<div class="col-lg-6 col-md-6">
+						{{ plot_div2 }}
+					</div>
 				</div>
-			</main>
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						{{ plot_div3 }}
+					</div>
+					<div class="col-lg-6 col-md-6">
+						{{ plot_div4 }}
+						{% endautoescape %}
+					</div>
+				</div>
 		</div>
+	</div>
+	</div>
+	</main>
+	</div>
 	</div>
 
 	<!-- Bootstrap core JavaScript
