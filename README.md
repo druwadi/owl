@@ -27,7 +27,7 @@
   <h3 align="center">Owl</h3>
 
   <p align="center">
-    A monitoring tool for your fleet of hosts, simple features are implemented in its current state, and more to come!
+    A monitoring tool suite for your fleet of hosts, that include a collector and a web service UI. Basic features are currently implemented in its current state, and more to come!
     <br />
     <a href="https://github.com/cisc6597/owl"><strong>Explore the docs »</strong></a>
     <br />
@@ -71,40 +71,81 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="webservice/webservice/static/images/webapp.png" alt="webapp screenshot" width="800" height="500">
+<img src="webservice/webservice/static/images/webapp.png" alt="webapp screenshot" width="850" height="500">
+
+This project was originally created as a project for the author's Computer Science Capstone course. This tool suite combines a metrics collector that can be placed on a host to continuously send metrics to a InfluxDB data store, and a web service that can be used as a simplified monitoring dashboard.
 
 
 
 ### Built With
 
-* []()
-* []()
-* []()
-
+* [Python](https://www.python.org/)
+* [Django](https://www.djangoproject.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Plotly Express](https://plotly.com/python/plotly-express/)
+* [Psutil](https://pypi.org/project/psutil/)
+* [InfluxDB](https://www.influxdata.com/)
+* [Docker](https://www.docker.com/) 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these simple steps below.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+You will need the following installed prior to running this locally.
+
+MacOS
+
+* Python
   ```sh
-  npm install npm@latest -g
+  brew install python
   ```
+* Docker
+  ```sh
+  brew install docker
+  ```
+* Docker Compose
+  ```sh
+  brew install docker-compose
+  ```
+
+Windows
+
+* [Python](https://docs.microsoft.com/en-us/windows/python/beginners)
+* [Docker](https://docs.docker.com/docker-for-windows/install/)
+Note: docker-compose is included on Windows Docker Desktop installation.  
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/druwadi/owl.git
+   git clone https://github.com/cisc6597/owl.git
    ```
-2. Install NPM packages
+2. Change directory into the parent directory owl
    ```sh
-   npm install
+   cd owl
+   ```
+3. Run Docker Compose
+   ```sh
+   docker-compose up
+   ```
+4. Navigate to http://localhost:8000
+5. To exit, `CTL C` on your keyboard, and run `docker-compose down` to clean up the network and
+   containers.
+
+Note: If you are developing against the project, you will want to take these additional steps below.
+
+1. Install all of the Python package dependencies locally
+   ```sh
+   pip3 install -r requirements.txt
+   ```
+2. Any local changes you wish to test, you will need to run the following to re-build your docker
+   image changes
+   ```sh
+   docker-compose build
    ```
 
 
@@ -112,16 +153,27 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This project was initially created and intended to be an open sourced version of several popular monitoring tools, but all in one, and without the additional fees that some monitoring tools may come with. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+A little about how this project works, the project is broken up into two primary services and a data store. 
 
+The first service is the collector which lives under `collector/collector.py`. This is a Python program that will continuously run on your intended host to collect metrics. The current method for creating a binary with this file is to use Pyinstaller which is cross platform and will work on MacOS, Windows, and Linux, an example command on Linux/MacOS is here `pyinstaller /usr/build/collector/collector.py --onefile`. This creates a single binary file to run on your host. While this is running, it sends back metrics to the InfluxDB data store that is specified in the `collector.py` file. It accepts an input of a Python Dictionary, and the current primary library for pulling basic metrics is `psutil`. 
+
+The second service is the web service that is built in the Django framework. This can be located under the `webservice` directory from the root. This web service functions as a basic dashboard UI that pulls in graphs from the Plotly express library to display metrics from the InfluxDB data store. It also has a navigation sidebar with some useful links such as documentation.
+
+The database chosen is a NoSQL time series database, InfluxDB. This was chosen for ease of use for time series events. Other NoSQL databases such as Cassandra or ACID databases such as Timescale (running PostgreSQL) could potentially be substituted in a fork with some light modifications.
+
+The current architecture diagram is below, currently this is setup as a demo in Docker compose in the Getting Started section. This will build three containers (Web service, InfluxDB, and a Ubuntu system running the collector binary) in a network for demoing how this works.
+
+<p align="center">
+<img src="webservice/webservice/static/images/diagram.png" alt="webapp screenshot">
+</p>
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/druwadi/owl/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/cisc6597/owl/issues) for a list of proposed features (and known issues).
 
 
 
@@ -168,14 +220,14 @@ Project Link: [https://github.com/druwadi/owl](https://github.com/druwadi/owl)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/druwadi/owl.svg?style=for-the-badge
-[contributors-url]: https://github.com/druwadi/owl/graphs/contributors
+[contributors-url]: https://github.com/cisc6597/owl/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/druwadi/owl.svg?style=for-the-badge
-[forks-url]: https://github.com/druwadi/owl/network/members
+[forks-url]: https://github.com/cisc6597/owl/network/members
 [stars-shield]: https://img.shields.io/github/stars/druwadi/owl.svg?style=for-the-badge
-[stars-url]: https://github.com/druwadi/owl/stargazers
+[stars-url]: https://github.com/cisc6597/owl/stargazers
 [issues-shield]: https://img.shields.io/github/issues/druwadi/owl.svg?style=for-the-badge
-[issues-url]: https://github.com/druwadi/owl/issues
-[license-shield]: https://img.shields.io/github/license/druwadi/owl.svg?style=for-the-badge
-[license-url]: https://github.com/druwadi/owl/blob/master/LICENSE.txt
+[issues-url]: https://github.com/cisc6597/owl/issues
+[license-shield]: https://img.shields.io/github/license/cisc6597/owl.svg?style=for-the-badge
+[license-url]: https://github.com/cisc6597/owl/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/druwadi
