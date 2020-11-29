@@ -71,7 +71,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="webservice/webservice/static/images/webapp.png" alt="webapp screenshot" width="600" height="600">
+<img src="webservice/webservice/static/images/webapp.png" alt="webapp screenshot" width="800" height="500">
 
 
 
