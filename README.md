@@ -200,7 +200,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Twitter[@druwadi](https://twitter.com/druwadi)
+Twitter: [@druwadi](https://twitter.com/druwadi)
 
 Email: druwadi13@gmail.com
 
