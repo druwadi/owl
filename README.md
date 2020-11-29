@@ -133,7 +133,7 @@ Note: docker-compose is included on Windows Docker Desktop installation.
    docker-compose up
    ```
 4. Navigate to http://localhost:8000
-5. To exit, `CTL C` on your keyboard, and run `docker-compose down` to clean up the network and
+5. To exit, `CTRL+C` on your keyboard, and run `docker-compose down` to clean up the network and
    containers.
 
 Note: If you are developing against the project, you will want to take these additional steps below.
@@ -183,9 +183,9 @@ See the [open issues](https://github.com/cisc6597/owl/issues) for a list of prop
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Push to the Branch (`git push origin feature`)
 5. Open a Pull Request
 
 
@@ -200,9 +200,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@druwadi](https://twitter.com/druwadi) - druwadi13@gmail.com
+Twitter[@druwadi](https://twitter.com/druwadi)
 
-Project Link: [https://github.com/druwadi/owl](https://github.com/druwadi/owl)
+Email: druwadi13@gmail.com
+
+Project Link: [https://github.com/cisc6597/owl](https://github.com/druwadi/owl)
 
 
 
@@ -219,13 +221,13 @@ Project Link: [https://github.com/druwadi/owl](https://github.com/druwadi/owl)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/druwadi/owl.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/cisc6597/owl.svg?style=for-the-badge
 [contributors-url]: https://github.com/cisc6597/owl/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/druwadi/owl.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/cisc6597/owl.svg?style=for-the-badge
 [forks-url]: https://github.com/cisc6597/owl/network/members
-[stars-shield]: https://img.shields.io/github/stars/druwadi/owl.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/cisc6597/owl.svg?style=for-the-badge
 [stars-url]: https://github.com/cisc6597/owl/stargazers
-[issues-shield]: https://img.shields.io/github/issues/druwadi/owl.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/cisc6597/owl.svg?style=for-the-badge
 [issues-url]: https://github.com/cisc6597/owl/issues
 [license-shield]: https://img.shields.io/github/license/cisc6597/owl.svg?style=for-the-badge
 [license-url]: https://github.com/cisc6597/owl/blob/master/LICENSE.txt
