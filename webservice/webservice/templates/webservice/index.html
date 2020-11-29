@@ -9,8 +9,6 @@
 	<meta name="author" content="" />
 	<!--<link rel="icon" href="../../../../favicon.ico" /> -->
 
-	<title>Dashboard Template for Bootstrap</title>
-
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,7 +19,7 @@
 
 <body>
 	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Owl</a>
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><img src="{% static 'images/wisdom.png' %}"> Owl</a>
 		<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" />
 		<ul class="navbar-nav px-3">
 			<li class="nav-item text-nowrap">
@@ -43,18 +41,18 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">
-								<span data-feather="settings"></span>
-								Settings
+							<span data-feather="settings"></span>
+							Settings
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="https://github.com/cisc6597/owl/blob/master/README.md">
 								<span data-feather="file-text"></span>
 								Documentation
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="https://github.com/cisc6597/owl">
 								<span data-feather="github"></span>
 								Github
 							</a>
@@ -67,16 +65,6 @@
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
 					<h1 class="h2">Host Health Dashboard</h1>
-					<div class="btn-toolbar mb-2 mb-md-0">
-						<div class="btn-group mr-2">
-							<button class="btn btn-sm btn-outline-secondary">Share</button>
-							<button class="btn btn-sm btn-outline-secondary">Export</button>
-						</div>
-						<button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-							<span data-feather="calendar"></span>
-							This week
-						</button>
-					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-6">
