@@ -13,14 +13,14 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-[![cisc6597](https://circleci.com/gh/cisc6597/owl.svg?style=shield&circle-token=1516c6fe46836362afb10ffed0f9517398d9aedc)](https://app.circleci.com/pipelines/github/cisc6597/owl)
+[![druwadi](https://circleci.com/gh/druwadi/owl.svg?style=shield&circle-token=1516c6fe46836362afb10ffed0f9517398d9aedc)](https://app.circleci.com/pipelines/github/druwadi/owl)
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/cisc6597/owl">
+  <a href="https://github.com/druwadi/owl">
     <img src="webservice/webservice/static/images/wisdom512.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -29,12 +29,12 @@
   <p align="center">
     A monitoring tool suite for your fleet of hosts, that include a collector and a web service UI. Basic features are currently implemented in its current state, and more to come!
     <br />
-    <a href="https://github.com/cisc6597/owl"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/druwadi/owl"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/cisc6597/owl/issues">Report Bug</a>
+    <a href="https://github.com/druwadi/owl/issues">Report Bug</a>
     ·
-    <a href="https://github.com/cisc6597/owl/issues">Request Feature</a>
+    <a href="https://github.com/druwadi/owl/issues">Request Feature</a>
   </p>
 </p>
 
@@ -122,7 +122,7 @@ Note: docker-compose is included on Windows Docker Desktop installation.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/cisc6597/owl.git
+   git clone https://github.com/druwadi/owl.git
    ```
 2. Change directory into the parent directory owl
    ```sh
@@ -163,7 +163,7 @@ The second service is the web service that is built in the Django framework. Thi
 
 The database chosen is a NoSQL time series database, InfluxDB. This was chosen for ease of use for time series events. Other NoSQL databases such as Cassandra or ACID databases such as Timescale (running PostgreSQL) could potentially be substituted in a fork with some light modifications.
 
-The current architecture diagram is below, currently this is setup as a demo in Docker compose in the Getting Started section. This will build three containers (Web service, InfluxDB, and a Ubuntu system running the collector binary) in a network for demoing how this works.
+The current architecture diagram is below, currently this is setup as a demo in Docker compose in the Getting Started section. This will build three containers (Web service, InfluxDB, and a Ubuntu system running the collector binary) in a network for demoing how this works. Note that the API between the database and webservice is actually the library API for InfluxDB and not a custom API.
 
 <p align="center">
 <img src="webservice/webservice/static/images/diagram.png" alt="webapp screenshot">
@@ -173,7 +173,7 @@ The current architecture diagram is below, currently this is setup as a demo in 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/cisc6597/owl/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/druwadi/owl/issues) for a list of proposed features (and known issues).
 
 
 
@@ -202,9 +202,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Twitter: [@druwadi](https://twitter.com/druwadi)
 
-Email: druwadi13@gmail.com
-
-Project Link: [https://github.com/cisc6597/owl](https://github.com/druwadi/owl)
+Project Link: [https://github.com/druwadi/owl](https://github.com/druwadi/owl)
 
 
 
@@ -221,15 +219,15 @@ Project Link: [https://github.com/cisc6597/owl](https://github.com/druwadi/owl)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/cisc6597/owl.svg?style=for-the-badge
-[contributors-url]: https://github.com/cisc6597/owl/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/cisc6597/owl.svg?style=for-the-badge
-[forks-url]: https://github.com/cisc6597/owl/network/members
-[stars-shield]: https://img.shields.io/github/stars/cisc6597/owl.svg?style=for-the-badge
-[stars-url]: https://github.com/cisc6597/owl/stargazers
-[issues-shield]: https://img.shields.io/github/issues/cisc6597/owl.svg?style=for-the-badge
-[issues-url]: https://github.com/cisc6597/owl/issues
-[license-shield]: https://img.shields.io/github/license/cisc6597/owl.svg?style=for-the-badge
-[license-url]: https://github.com/cisc6597/owl/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/druwadi/owl?style=for-the-badge
+[contributors-url]: https://github.com/druwadi/owl/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/druwadi/owl?style=for-the-badge
+[forks-url]: https://github.com/druwadi/owl/network/members
+[stars-shield]: https://img.shields.io/github/stars/druwadi/owl?style=for-the-badge
+[stars-url]: https://github.com/druwadi/owl/stargazers
+[issues-shield]: https://img.shields.io/github/issues/druwadi/owl?style=for-the-badge
+[issues-url]: https://github.com/druwadi/owl/issues
+[license-shield]: https://img.shields.io/github/license/druwadi/owl?style=for-the-badge
+[license-url]: https://github.com/druwadi/owl/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/druwadi
