@@ -10,9 +10,9 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+[![license-shield]][license-url]
 [![druwadi](https://circleci.com/gh/druwadi/owl.svg?style=shield&circle-token=1516c6fe46836362afb10ffed0f9517398d9aedc)](https://app.circleci.com/pipelines/github/druwadi/owl)
 
 
@@ -225,7 +225,7 @@ Project Link: [https://github.com/druwadi/owl](https://github.com/druwadi/owl)
 [stars-url]: https://github.com/druwadi/owl/stargazers
 [issues-shield]: https://img.shields.io/github/issues/druwadi/owl.svg?style=for-the-badge
 [issues-url]: https://github.com/druwadi/owl/issues
-[license-shield]: https://img.shields.io/github/license/druwadi/owl?style=social
+[license-shield]: https://img.shields.io/github/license/druwadi/owl?style=plastic
 [license-url]: https://github.com/druwadi/owl/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/druwadi
