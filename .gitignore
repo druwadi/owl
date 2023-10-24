@@ -5,3 +5,6 @@
 __pycache__
 .DS_Store
 /webservice/db.sqlite3
+venv
+.venv
+/venv*
